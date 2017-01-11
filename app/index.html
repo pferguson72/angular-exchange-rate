@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="exchangeRate">
+  <head>
+    <meta charset="utf-8">
+    <title>Exchange Rates</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="services/services.module.js"></script>
+    <script src="services/rate/rate.module.js"></script>
+    <script src="services/rate/rate.service.js"></script>
+    <script src="services/currencySymbol/currencySymbol.module.js"></script>
+    <script src="services/currencySymbol/currencySymbol.service.js"></script>
+    <script src="rate-list/rate-list.module.js"></script>
+    <script src="rate-list/rate-list.component.js"></script>
+
+  </head>
+  <body>
+
+    <div ng-view></div>
+
+  </body>
+</html>

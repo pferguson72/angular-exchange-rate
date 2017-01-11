@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+
+      <p>
+        <label for="baseCurrency">Base Currency:</label>
+        <select id="baseCurrency" ng-model="$ctrl.baseCurrency" ng-change="$ctrl.currencyChange()">
+          <option ng-repeat="option in $ctrl.allCurrencies | orderBy" ng-value="option">{{option}}</option>
+        </select>
+      </p>
+      <p>
+        <label for="quoteCurrency">Quote Currency:</label>
+        <select id="quoteCurrency" ng-model="$ctrl.quoteCurrency" ng-change="$ctrl.currencyChange()">
+          <option ng-repeat="option in $ctrl.allCurrencies | orderBy" ng-value="option">{{option}}</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-4">
+      <div ng-if="$ctrl.haveBothCurrencies()">
+        <p>
+          <label for="baseAmount">Base Amount:</label>
+          <span ng-bind-html="$ctrl.baseCurrencySymbol()"></span>
+          <input type="number" id="baseAmount" ng-model="$ctrl.baseAmount" ng-change="$ctrl.baseAmountChange()">
+        </p>
+        <p>
+          <label for="quoteAmount">Quote Amount:</label>
+          <span ng-bind-html="$ctrl.quoteCurrencySymbol()"></span>
+          <input type="number" id="quoteAmount" ng-model="$ctrl.quoteAmount" ng-change="$ctrl.quoteAmountChange()">
+        </p>
+        <p>
+          <label for="exchangeRate">Exchange Rate:</label>
+          <input id="exchangeRate" ng-model="$ctrl.exchangeRate" ng-change="$ctrl.baseAmountChange()">
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+    </div>
+  </div>
+</div>
