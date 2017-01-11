@@ -2,9 +2,10 @@ body {
   padding: 20px;
 }
 
-h1 {
+h3 {
   border-bottom: 1px solid gray;
   margin-top: 0;
+  color: #660000;
 }
 
 label {
